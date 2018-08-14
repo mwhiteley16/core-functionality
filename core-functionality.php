@@ -36,8 +36,16 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_css' );
 //	));
 //}
 
-//* ACF -- Hide ACF Menu from WordPress Dashboard (uncomment to use)
-//add_filter('acf/settings/show_admin', '__return_false');
+//* ACF -- Hide ACF Menu from WordPress Dashboard from everyone except specified user
+add_filter( 'acf/settings/show_admin', 'wd_acf_show_admin' );
+function wd_acf_show_admin( $show ) {
+     $current_user = wp_get_current_user();
+     if ( $current_user->user_email == 'matt@whiteleydesigns.com' ){
+          return true; // show it
+     } else {
+          return false; // hide it
+     }
+}
 
 /**
  * Gravity Forms Domain
