@@ -12,6 +12,7 @@
 define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
 
 // Required files
+//require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
 //require_once WD_PATH.'/lib/post-types/post-type-news.php';
 //require_once WD_PATH.'/lib/shortcodes/shortcode-news.php';
 //require_once WD_PATH.'/lib/taxonomies/taxonomy-news.php';
