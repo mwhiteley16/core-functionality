@@ -18,6 +18,7 @@ function create_news_tax() {
                'show_ui' => true,
                'show_tagcloud' => false,
                'hierarchical' => true,
+               'show_in_rest' => true,
           )
      );
 }
