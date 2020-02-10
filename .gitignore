@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# General CodeKit files to ignore
+config.codekit
+config.codekit3
+/min
