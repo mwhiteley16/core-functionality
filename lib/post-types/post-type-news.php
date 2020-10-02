@@ -38,6 +38,7 @@ function wd_news_cpt() {
 		'menu_position'      => 8,
 		'menu_icon'          => 'dashicons-welcome-widgets-menus', // https://developer.wordpress.org/resource/dashicons/
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
+          // 'show_in_rest'       => true,
 	);
 
 	register_post_type( 'news', $args );

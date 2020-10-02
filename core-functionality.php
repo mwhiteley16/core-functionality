@@ -11,8 +11,27 @@
 // Path to plugin
 define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
 
-// Required files
+// functionality
+require_once WD_PATH.'/lib/functionality/acf.php';
+
+// post types
 //require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
 //require_once WD_PATH.'/lib/post-types/post-type-news.php';
-//require_once WD_PATH.'/lib/shortcodes/shortcode-news.php';
+
+// taxonomies
 //require_once WD_PATH.'/lib/taxonomies/taxonomy-news.php';
+
+
+/**
+ * change location of acf json sync to /acf-json folder within core functionality plugin
+ *
+ * @link https://www.advancedcustomfields.com/resources/local-json/
+ *
+ */
+add_filter('acf/settings/save_json', function() {
+	return dirname(__FILE__) . '/acf-json';
+});
+add_filter('acf/settings/load_json', function() {
+	$paths[] = dirname(__FILE__) . '/acf-json';
+	return $paths;
+});

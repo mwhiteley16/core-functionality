@@ -1,0 +1,83 @@
+{
+    "key": "group_5f0c5d4d266cc",
+    "title": "Block - Tabs",
+    "fields": [
+        {
+            "key": "field_5f0c5d519a5d8",
+            "label": "Tabs",
+            "name": "wd_block_tabs",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5f0c5d5d9a5d9",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Tab",
+            "sub_fields": [
+                {
+                    "key": "field_5f0c5d5d9a5d9",
+                    "label": "Tab Label",
+                    "name": "wd_tab_label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f0c5d669a5da",
+                    "label": "Tab Content",
+                    "name": "wd_tab_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-tabs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1601662376
+}

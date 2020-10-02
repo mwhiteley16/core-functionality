@@ -56,21 +56,21 @@ class WD_Block_Area {
      	);
 
      	$args = array(
-     		'labels'              => $labels,
-                'description'         => __( 'Block areas used to show custom blocks in templates.' ),
-     		'public'              => false,
-     		'show_ui'             => true,
-                'show_in_rest'        => true,
-                'exclude_from_search' => true,
-     		'show_in_menu'        => true,
-     		'query_var'           => true,
-                'can_export'          => true,
-     		'rewrite'             => array( 'slug' => 'block-area', 'with_front' => false ),
-     		'has_archive'         => false,
-     		'hierarchical'        => false,
-     		'menu_position'       => 29,
-     		'menu_icon'           => 'dashicons-welcome-widgets-menus', // https://developer.wordpress.org/resource/dashicons/
-     		'supports'            => array( 'title', 'editor', 'revisions' ),
+               'labels'              => $labels,
+               'description'         => __( 'Block areas used to show custom blocks in templates.' ),
+               'public'              => false,
+               'show_ui'             => true,
+               'show_in_rest'        => true,
+               'exclude_from_search' => true,
+               'show_in_menu'        => true,
+               'query_var'           => true,
+               'can_export'          => true,
+               'rewrite'             => array( 'slug' => 'block-area', 'with_front' => false ),
+               'has_archive'         => false,
+               'hierarchical'        => false,
+               'menu_position'       => 29,
+               'menu_icon'           => 'dashicons-welcome-widgets-menus', // https://developer.wordpress.org/resource/dashicons/
+               'supports'            => array( 'title', 'editor', 'revisions' ),
      	);
 
      	register_post_type( 'block_area', $args );
