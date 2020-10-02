@@ -62,7 +62,7 @@ function wd_acf_blocks() {
                'name'			=> '',
                'title'			=> __( '' ),
                'description'		=> __( '' ),
-               'category'		=> 'formatting',
+               'category'		=> 'wd-blocks',
                'icon'			=> [
                     'background' => '#fff',
                     'foreground' => '#b5267b',
@@ -97,6 +97,27 @@ function wd_acf_block_render_callback( $block ) {
 		include( dirname(__FILE__) . "/acf-blocks/templates/block-{$slug}.php" );
 	}
 }
+
+
+/**
+ *
+ * add custom block category for ACF blocks
+ *
+ * @link https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+ *
+ */
+function wd_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'wd-blocks',
+				'title' => __( 'Whiteley Designs Blocks', 'wd-blocks' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'wd_block_category', 10, 2);
 
 
 /**

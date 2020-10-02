@@ -1,8 +1,8 @@
 <?php
    /*
    Plugin Name: Core Functionality Plugin
-   Description: DO NOT DEACTIVATE. This plugin controls creation of Custom Post Types (CPTs), taxonomies, shortcodes and other non-theme functionality.  This is a core functionality plugin required for the site to function properly.
-   Version: 2.0
+   Description: DO NOT DEACTIVATE. This plugin controls creation of Custom Post Types (CPTs), taxonomies, ACF blocks and other non-theme specific functionality.  This is a core functionality plugin required for the site to function properly.
+   Version: 3.0
    Author: Matt Whiteley
    Author URI: http://www.whiteleydesigns.com
    License: GPL2
