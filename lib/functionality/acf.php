@@ -53,15 +53,15 @@ function wd_acf_show_admin( $show ) {
  * Gutenberg Supports: https://developer.wordpress.org/block-editor/developers/block-api/block-supports/
  *
 */
-add_action( 'acf/init', 'wd_acf_blocks' );
+//add_action( 'acf/init', 'wd_acf_blocks' );
 function wd_acf_blocks() {
 
  	if( function_exists( 'acf_register_block' ) ) {
 
           acf_register_block_type(array(
-               'name'			=> 'acf-slideshow',
-               'title'			=> __( 'Slideshow Block' ),
-               'description'		=> __( 'A simple slideshow block.' ),
+               'name'			=> '',
+               'title'			=> __( '' ),
+               'description'		=> __( '' ),
                'category'		=> 'formatting',
                'icon'			=> [
                     'background' => '#fff',
@@ -69,10 +69,10 @@ function wd_acf_blocks() {
                     'src'        => 'star-filled'
                ],
                'mode'              => 'preview',
-               'keywords'		=> [ 'slideshow', 'wd', 'acf' ],
+               'keywords'		=> [ '', 'wd', 'acf', 'clientname' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-slideshow.js',
+               // 'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-name.js',
                'supports'          => [
                     // 'align' => false, // disable alignment toolbar
                     // // 'align' => [ 'left', 'right', 'full' ] // customize which are available
@@ -81,19 +81,6 @@ function wd_acf_blocks() {
                     // 'anchor' => true, // defaults to false
                     // 'jsx' => true // defaults to false, used for innerBlocks
                ]
-          ));
-
-          acf_register_block_type(array(
-               'name'			=> 'acf-tabs',
-               'title'			=> __( 'Tabs Block' ),
-               'description'		=> __( 'A simple tabs block.' ),
-               'category'		=> 'formatting',
-               'icon'			=> 'star-filled',
-               'mode'              => 'preview',
-               'keywords'		=> [ 'tabs, wd, acf' ],
-               'post_type'         => [ 'post', 'page' ],
-               'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-tabs.js',
           ));
 
  	}
