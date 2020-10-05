@@ -69,17 +69,20 @@ function wd_acf_blocks() {
                     'src'        => 'star-filled'
                ],
                'mode'              => 'preview',
-               'keywords'		=> [ '', 'wd', 'acf', 'clientname' ],
+               'align'             => '',
+               'keywords'		=> [ '', 'wd', 'acf', 'CLIENT-NAME' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
-               // 'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-name.js',
+               'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-NAME.js',
+               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-NAME.css',
                'supports'          => [
-                    // 'align' => false, // disable alignment toolbar
-                    // // 'align' => [ 'left', 'right', 'full' ] // customize which are available
-                    // 'align_text' => true, // defaults to false
-                    // 'align_content' => true, // defaults to false
-                    // 'anchor' => true, // defaults to false
-                    // 'jsx' => true // defaults to false, used for innerBlocks
+                    'align' => false, // disable alignment toolbar, defaults to true
+                    // 'align' => [ 'left', 'right', 'full' ] // customize which are available
+                    'align_text' => true, // defaults to false
+                    'align_content' => true, // defaults to false
+                    'anchor' => true, // defaults to false
+                    'multiple' => false, // allows multiple instances of block, defaults to true
+                    'jsx' => true // defaults to false, used for innerBlocks
                ]
           ));
 
@@ -157,6 +160,7 @@ add_action( 'acf/input/admin_footer', 'wd_acf_color_palette' );
  *
 */
 add_filter('acf/load_field/name=wd_text_color', 'wd_acf_dynamic_colors_load');
+add_filter('acf/load_field/name=wd_background_color', 'wd_acf_dynamic_colors_load');
 function wd_acf_dynamic_colors_load( $field ) {
 
      // get array of colors created using editor-color-palette
