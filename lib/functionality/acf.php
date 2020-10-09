@@ -53,36 +53,56 @@ function wd_acf_show_admin( $show ) {
  * Gutenberg Supports: https://developer.wordpress.org/block-editor/developers/block-api/block-supports/
  *
 */
-//add_action( 'acf/init', 'wd_acf_blocks' );
+add_action( 'acf/init', 'wd_acf_blocks' );
 function wd_acf_blocks() {
 
  	if( function_exists( 'acf_register_block' ) ) {
 
+          // acf_register_block_type(array(
+          //      'name'			=> '',
+          //      'title'			=> __( '' ),
+          //      'description'		=> __( '' ),
+          //      'category'		=> 'wd-blocks',
+          //      'icon'			=> [
+          //           'background' => '#fff',
+          //           'foreground' => '#b5267b',
+          //           'src'        => 'star-filled'
+          //      ],
+          //      'mode'              => 'preview',
+          //      'align'             => '',
+          //      'keywords'		=> [ '', 'wd', 'acf', 'CLIENT-NAME' ],
+          //      'post_type'         => [ 'post', 'page' ],
+          //      'render_callback'	=> 'wd_acf_block_render_callback',
+          //      'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-NAME.js',
+          //      'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-NAME.css',
+          //      'supports'          => [
+          //           'align' => false, // disable alignment toolbar, defaults to true
+          //           // 'align' => [ 'left', 'right', 'full' ] // customize which are available
+          //           'align_text' => true, // defaults to false
+          //           'align_content' => true, // defaults to false
+          //           'anchor' => true, // defaults to false
+          //           'multiple' => false, // allows multiple instances of block, defaults to true
+          //           'jsx' => true // defaults to false, used for innerBlocks
+          //      ]
+          // ));
+
           acf_register_block_type(array(
-               'name'			=> '',
-               'title'			=> __( '' ),
-               'description'		=> __( '' ),
+               'name'			=> 'acf-separator',
+               'title'			=> __( 'Separator Block' ),
+               'description'		=> __( 'A block to replace the standard block editor separator block.' ),
                'category'		=> 'wd-blocks',
                'icon'			=> [
                     'background' => '#fff',
                     'foreground' => '#b5267b',
-                    'src'        => 'star-filled'
+                    'src'        => 'minus'
                ],
                'mode'              => 'preview',
-               'align'             => '',
-               'keywords'		=> [ '', 'wd', 'acf', 'CLIENT-NAME' ],
+               'keywords'		=> [ 'separator', 'hr', 'divider', 'wd', 'acf' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-NAME.js',
-               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-NAME.css',
+               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-separator.css',
                'supports'          => [
-                    'align' => false, // disable alignment toolbar, defaults to true
-                    // 'align' => [ 'left', 'right', 'full' ] // customize which are available
-                    'align_text' => true, // defaults to false
-                    'align_content' => true, // defaults to false
-                    'anchor' => true, // defaults to false
-                    'multiple' => false, // allows multiple instances of block, defaults to true
-                    'jsx' => true // defaults to false, used for innerBlocks
+                    'align' => [ 'full', 'wide' ],
                ]
           ));
 
