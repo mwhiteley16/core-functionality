@@ -106,6 +106,28 @@ function wd_acf_blocks() {
                ]
           ));
 
+          acf_register_block_type(array(
+               'name'			=> 'acf-max-width-block',
+               'title'			=> __( 'Max-Width Block' ),
+               'description'		=> __( 'A block to wrap any content in a max-width container with alignment options.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'editor-expand'
+               ],
+               'mode'              => 'preview',
+               'keywords'		=> [ 'max-width', 'wd', 'acf', '3sixty' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-max-width.css',
+               'supports'          => [
+                    'align'      => false,
+                    'align_text' => true,
+                    'jsx'        => true
+               ]
+          ));
+
  	}
 }
 

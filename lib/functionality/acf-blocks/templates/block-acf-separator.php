@@ -8,7 +8,7 @@
  * @license      GPL-2.0+
 **/
 
-// ACF Variables
+// ACF custom fields
 $wd_background_color = get_field( 'wd_background_color' );
 $wd_block_separator_width_choice = get_field( 'wd_block_separator_width_choice' );
 $wd_block_separator_width = get_field( 'wd_block_separator_width' );
@@ -16,18 +16,16 @@ $wd_block_separator_height = get_field( 'wd_block_separator_height' );
 $wd_block_separator_include_margin = get_field( 'wd_block_separator_include_margin' );
 $wd_block_separator_alignment = get_field( 'wd_block_separator_alignment' );
 
-// Block ID
+// block ID
 $block_id = 'acf-separator-' . $block['id'];
 
-// Block Classes
+// block Classes
 $block_classes = 'acf-block acf-separator-block ' . $wd_block_separator_include_margin . ' ' . $wd_block_separator_alignment;
 
-// get align class if present
 if( ! empty( $block['align'] ) ) {
      $block_classes .= ' align' . $block['align'];
 }
 
-// get custom class name if present
 if( ! empty( $block['className'] ) ) {
      $block_classes .= ' ' . $block['className'];
 }

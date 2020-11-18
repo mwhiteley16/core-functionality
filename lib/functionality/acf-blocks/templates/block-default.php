@@ -8,13 +8,13 @@
  * @license      GPL-2.0+
 **/
 
-// ACF Variable custom meta
+// ACF custom fields
 
 
-// Block ID
+// block ID
 $block_id = 'NAME-' . $block['id'];
 
-// Block Classes
+// block Classes
 $block_classes = 'acf-block NAME-block';
 
 if( ! empty( $block['align'] ) ) { // block alignment (left, center, right, wide, full)
