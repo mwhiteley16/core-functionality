@@ -117,7 +117,7 @@ function wd_acf_blocks() {
                     'src'        => 'editor-expand'
                ],
                'mode'              => 'preview',
-               'keywords'		=> [ 'max-width', 'wd', 'acf', '3sixty' ],
+               'keywords'		=> [ 'max-width', 'wd', 'acf' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
                'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-max-width.css',
