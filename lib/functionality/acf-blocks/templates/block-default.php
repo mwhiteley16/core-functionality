@@ -25,8 +25,15 @@ if( ! empty( $block['align_text'] ) ) { // text alignment (left, center, right)
      $block_classes .= ' has-text-align-' . $block['align_text'];
 }
 
+// get content align (standard)
 if( ! empty( $block['align_content'] ) ) { // content alignment (top, center, bottom)
      $block_classes .= ' is-vertically-aligned-' . $block['align_content'];
+}
+
+// get content align (matrix)
+if( ! empty( $block['align_content'] ) ) {
+     $block_content_align = preg_replace('#[ -]+#', '-', $block['align_content']);
+     $block_classes .= ' is-position-' . $block_content_align;
 }
 
 if( ! empty( $block['className'] ) ) { // custom class name

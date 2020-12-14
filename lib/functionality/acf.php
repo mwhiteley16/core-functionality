@@ -79,7 +79,7 @@ function wd_acf_blocks() {
           //           'align' => false, // disable alignment toolbar, defaults to true
           //           // 'align' => [ 'left', 'right', 'full' ] // customize which are available
           //           'align_text' => true, // defaults to false
-          //           'align_content' => true, // defaults to false
+          //           'align_content' => true, // defaults to false ('matrix' to use align_content matrix)
           //           'anchor' => true, // defaults to false
           //           'multiple' => false, // allows multiple instances of block, defaults to true
           //           'jsx' => true // defaults to false, used for innerBlocks
