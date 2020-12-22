@@ -6,6 +6,9 @@
    Author: Matt Whiteley
    Author URI: http://www.whiteleydesigns.com
    License: GPL2
+
+   BEFORE MODIFYING THIS PLUGIN:
+   Please read plugin documentation here: https://github.com/mwhiteley16/core-functionality/wiki   
    */
 
 // Path to plugin
