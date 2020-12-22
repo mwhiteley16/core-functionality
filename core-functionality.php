@@ -11,9 +11,12 @@
 // Path to plugin
 define( 'WD_PATH', WP_PLUGIN_DIR . '/' . basename( dirname( __FILE__ ) ) );
 
-// functionality
-require_once WD_PATH.'/lib/blocks/acf.php';
+// blocks
+require_once WD_PATH.'/lib/blocks/blocks-acf.php';
 // require_once WD_PATH.'/lib/blocks/block-patterns.php';
+
+// functionality
+require_once WD_PATH.'/lib/functionality/acf.php';
 
 // post types
 //require_once WD_PATH.'/lib/post-types/post-type-block-areas.php';
