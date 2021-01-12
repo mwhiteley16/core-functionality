@@ -33,7 +33,7 @@ function wd_acf_blocks() {
           //      'post_type'         => [ 'post', 'page' ],
           //      'render_callback'	=> 'wd_acf_block_render_callback',
           //      'enqueue_script'    => plugin_dir_url(__FILE__) . '/acf-blocks/js/block-acf-NAME.js',
-          //      'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-NAME.css',
+          //      'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/acf-css-output/blocks-NAME.css',
           //      'supports'          => [
           //           'align' => false, // disable alignment toolbar, defaults to true
           //           // 'align' => [ 'left', 'right', 'full' ] // customize which are available
@@ -59,7 +59,6 @@ function wd_acf_blocks() {
                'keywords'		=> [ 'separator', 'hr', 'divider', 'wd', 'acf' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-separator.css',
                'supports'          => [
                     'align' => [ 'full', 'wide' ],
                ]
@@ -79,7 +78,6 @@ function wd_acf_blocks() {
                'keywords'		=> [ 'max-width', 'wd', 'acf' ],
                'post_type'         => [ 'post', 'page' ],
                'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_style'     => get_stylesheet_directory_uri() . '/assets/scss/partials/blocks/css-output/blocks-max-width.css',
                'supports'          => [
                     'align'      => false,
                     'align_text' => true,
