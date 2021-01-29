@@ -85,6 +85,28 @@ function wd_acf_blocks() {
                ]
           ));
 
+          acf_register_block_type(array(
+               'name'			=> 'acf-hero',
+               'title'			=> __( 'Hero Block' ),
+               'description'		=> __( 'A hero block.' ),
+               'category'		=> 'wd-blocks',
+               'icon'			=> [
+                    'background' => '#fff',
+                    'foreground' => '#b5267b',
+                    'src'        => 'star-filled'
+               ],
+               'mode'              => 'preview',
+               'align'             => 'full',
+               'keywords'		=> [ 'hero', 'wd', 'acf' ],
+               'post_type'         => [ 'post', 'page' ],
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'supports'          => [
+                    'align'         => [ 'wide', 'full' ],
+                    'align_content' => 'matrix',
+                    'jsx'           => true // defaults to false, used for innerBlocks
+               ]
+          ));
+
  	}
 }
 
