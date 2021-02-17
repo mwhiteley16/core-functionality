@@ -32,6 +32,29 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_602d118ae5ae5",
+            "label": "Separator Type",
+            "name": "wd_block_separator_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_5f80aac708f3f",
             "label": "Separator Width",
             "name": "wd_block_separator_width_choice",
@@ -172,5 +195,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1602271020
+    "modified": 1613566395
 }
