@@ -45,9 +45,9 @@ if( ! empty( $block['className'] ) ) {
 
 // set hr styles
 $hr_styles = 'height: 1px;';
-$hr_styles .= 'border-top-style: ' . $wd_block_separator_type . ';';
-$hr_styles .= 'border-width: ' . $wd_block_separator_height . 'px;';
-$hr_styles .= 'border-color: ' . $border_color . ';';
+$hr_styles .= 'border-top-style:' . $wd_block_separator_type . ';';
+$hr_styles .= 'border-width:' . $wd_block_separator_height . 'px;';
+$hr_styles .= 'border-color:' . $border_color . ';';
 
 if( $wd_block_separator_width_choice == 'user-defined' ) {
      $hr_styles .= 'width:' . $wd_block_separator_width . 'px;';
