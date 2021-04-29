@@ -1,3 +1,6 @@
+**This repository has been deprecated. Please visit the new repository:<br>
+https://github.com/mwhiteley16/Whiteley-Designs-Blueprint**
+
 # Core Functionality Plugin
 
 This plugin is used to house all non-theme related functionality including, but not limited to, custom post types, taxonomies and acf blocks.  This is necessary to ensure core functionality is flexible to be used when theme changes are required.
